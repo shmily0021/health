@@ -16,7 +16,7 @@ spring:
   # 数据源
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/health
+    url: jdbc:mysql://localhost:3306/health?serverTimezone=UTC
     username: root
     password: 200112
     type: com.alibaba.druid.pool.DruidDataSource
