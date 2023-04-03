@@ -1,0 +1,28 @@
+server:
+  port: 9000 # 端口号
+spring:
+  application:
+    name: health-provider
+  dubbo:
+    application:
+      name: health-provider
+    protocol:
+      name: dubbo
+      port: 20881
+    registry:
+      address: zookeeper://192.168.129.34:2181
+    scan:
+      base-packages: com.ujiuye.service.impl
+  # 数据源
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/health
+    username: root
+    password: 200112
+    type: com.alibaba.druid.pool.DruidDataSource
+# Mybatis_Plus
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.ujiuye.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

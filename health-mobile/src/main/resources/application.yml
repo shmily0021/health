@@ -1,0 +1,17 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: health_mobile
+
+  # dubbo
+  dubbo:
+    application:
+      name: health_mobile
+    protocol:
+      name: dubbo
+      port: 20883
+    registry:
+      address: zookeeper://192.168.129.34:2181
+    scan:
+      base-packages: com.ujiuye.controller

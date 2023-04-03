@@ -1,0 +1,17 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: health-backend
+
+  # dubbo
+  dubbo:
+    application:
+      name: health-backend
+    protocol:
+      name: dubbo
+      port: 20882
+    registry:
+      address: zookeeper://192.168.129.34:2181
+    scan:
+      base-packages: com.ujiuye.controller
