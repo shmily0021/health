@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.ujiuye.entity.Checkitem;
 import com.ujiuye.result.PageResult;
 import com.ujiuye.result.QueryPageBean;
+import com.ujiuye.result.ResultVo;
 
 /**
  * <p>
@@ -19,4 +20,6 @@ public interface CheckItemService extends IService<Checkitem> {
     PageResult findByPage(QueryPageBean queryPageBean);
 
     boolean delCheckitem(Integer id);
+
+    ResultVo findAll();
 }

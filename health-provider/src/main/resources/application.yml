@@ -16,10 +16,13 @@ spring:
   # 数据源
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/health?serverTimezone=UTC
+    url: jdbc:mysql://192.168.129.34:3306/health?serverTimezone=UTC
     username: root
     password: 200112
     type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 192.168.129.34
+    port: 6379
 # Mybatis_Plus
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml

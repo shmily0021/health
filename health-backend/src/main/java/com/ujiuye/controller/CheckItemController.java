@@ -2,7 +2,6 @@ package com.ujiuye.controller;
 
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.ujiuye.Message.MessageConstant;
 import com.ujiuye.entity.Checkitem;
 import com.ujiuye.result.PageResult;
 import com.ujiuye.result.QueryPageBean;
@@ -11,10 +10,6 @@ import com.ujiuye.service.CheckItemService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.xml.transform.Result;
-import java.util.List;
-
 import static com.ujiuye.Message.MessageConstant.*;
 
 /**
@@ -74,6 +69,13 @@ public class CheckItemController {
         }
 
         return new ResultVo(false, EDIT_CHECKITEM_FAIL, null);
+    }
+
+    // 查询所有检查项(检查组的检查项使用)
+    @RequestMapping("/findAll")
+    public ResultVo findAll() {
+
+        return checkItemService.findAll();
     }
 }
 
